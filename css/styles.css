@@ -1,0 +1,55 @@
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: rgb(196, 194, 194);
+  padding-bottom: 16px;
+}
+
+.theRing {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  padding: 12px 18px;
+}
+
+button {
+  background-color: steelblue;
+  padding: 8px 16px;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.scoreBoard {
+  background-color: coral;
+  margin-bottom: 16px;
+
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+.play-again {
+  visibility: hidden;
+  margin-bottom: 60px;
+  padding: 20px;
+  font-size: 25px;
+  color: #acabab;
+  border: 4px solid #fdaf1d;
+  border-radius: 5px;
+  background-color: transparent;
+  transition: all .3s;
+}
+
+/* .play-again:hover {
+  background-color: #fdaf1d;
+  color: #fff;
+}  */

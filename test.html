@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ROCK vs PAPER vs SCISSORS</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Welcome to ROCK vs PAPER vs SCISSORS war</h1>
+        <p>
+          Robot invaved all the Nations. You are the last hope. Robot give you
+          last chance to save the world by become their competitor in the basic
+          game of human, called ROCK vs PAPER vs SCISSORS. You must win 3/5
+          round to save the world
+        </p>
+      </div>
+
+      <div class="theRing">
+        <button class="rock">ROCK</button>
+        <button class="paper">PAPER</button>
+        <button class="scissors">SCISSORS</button>
+      </div>
+
+      <div class="scoreBoard">
+        <h2 id="round">Scoreboard</h2>
+        
+        <p id="playerScore">The last hope: 0</p>
+        <p id="robotScore">The Robot: 0</p>
+      </div>
+    </div>
+
+  <script>
+    let rockBtn = document.getElementsByClassName('rock');
+    humanSelection = '';
+    rockBtn[0].addEventListener('click', () => handleClick('paper'));
+
+    function handleClick(humanSelect) {
+      console.log(humanSelection);
+
+      return humanSelection = humanSelect;
+    }
+  </script>
+
+  </body>
+</html>
+
+
+
+
+
