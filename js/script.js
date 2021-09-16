@@ -31,7 +31,7 @@ const playerScore = document.getElementById("playerScore");
 const machineScore = document.getElementById("robotScore");
 const robotChoose = document.getElementById("robotChoose");
 const round = document.getElementById("round");
-const buttonPlayAgain = document.querySelector(".play-again");
+const playAgainBtn = document.querySelector(".play-again");
 
 function robotPlay() {
   const items = ["rock", "paper", "scissors"];
@@ -87,8 +87,10 @@ function handleClick(humanSelect) {
 function winnerAnnouncement(winner) {
   if ((winner = "human")) {
     round.innerText = "You saved the world";
+    resetGame();
   } else {
     round.innerText = "It's the end";
+    resetGame();
   }
 }
 
@@ -96,11 +98,12 @@ function checkScore() {
   if (humanScore === 5) {
     winnerAnnouncement("human");
     disableGameButton();
-    buttonPlayAgain.style.visibility = "visible";
+    playAgainBtn.style.visibility = "visible";
+    
   } else if (robotScore === 5) {
     winnerAnnouncement("robot");
     disableGameButton();
-    buttonPlayAgain.style.visibility = "visible";
+    playAgainBtn.style.visibility = "visible";
   } else {
     updateUI();
   }
@@ -113,7 +116,9 @@ function updateUI() {
 }
 
 function resetGame() {
-  buttonPlayAgain.addEventListener("click", () => {
-    location.reload();
+  
+  playAgainBtn.addEventListener("click", () => {
+    window.location.reload();
   });
+
 }
